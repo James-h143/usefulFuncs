@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+class usefulFuncs{
+    
+    async getDirsRecursively(sPath){
+        try{
+            const files = [];
+            const items = fs.readdirSync(sPath,"utf8");
+            for(let i = 0;i<items.length;i++){
+                const item = items[i]
+                const oItem = fs.lstatSync(sPath+"/"+item);
+                if(oItem.isDirectory()){
+                    const recursiveFiles = await this.getDirsRecursively(sPath+"/"+item);
+                    recursiveFiles.forEach((subfolderFile)=>{
+                        files.push(subfolderFile);
+                    });
+                }if(oItem.isFile()){
+                    files.push(sPath+"/"+item);
+                }
+            }
+            return files;
+        }catch (e){
+            console.log(e)
+        }
+    }
+} 
+module.exports = new usefulFuncs();
