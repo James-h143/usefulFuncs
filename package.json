@@ -1,0 +1,22 @@
+{
+  "name": "useful-funcs",
+  "version": "1.0.0",
+  "description": "a collection of useful functions",
+  "main": "usefulFuncs",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-h143/usefulFuncs.git"
+  },
+  "author": "James Hennigan",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/James-h143/usefulFuncs/issues"
+  },
+  "homepage": "https://github.com/James-h143/usefulFuncs#readme"
+}
