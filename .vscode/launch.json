@@ -9,6 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
+      // "runtimeArgs": ["--max-old-space-size=8192"],
       "program": "${workspaceFolder}/test.js"
     }
   ]
